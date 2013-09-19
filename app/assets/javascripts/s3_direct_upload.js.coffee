@@ -75,7 +75,7 @@ $.fn.S3Uploader = (options) ->
             test = {}
             test[$uploadForm.data('callback-param')] = content
             data: test
-            dataType: 'json'
+            dataType: 'script'
             beforeSend: ( xhr, settings )       -> $uploadForm.trigger( 'ajax:beforeSend', [xhr, settings] )
             complete:   ( xhr, status )         -> $uploadForm.trigger( 'ajax:complete', [xhr, status] )
             success:    ( data, status, xhr )   -> $uploadForm.trigger( 'ajax:success', [data, status, xhr] )
